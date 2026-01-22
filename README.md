@@ -2,11 +2,15 @@
 
 A minimalist Windows Recycle Bin status indicator for the system tray, built with Godot Engine 4.5+.
 
+![Menu](https://github.com/user-attachments/assets/b81efab4-e6fb-4cc5-a2ee-7e154ddb1ead)
+
 ## Description
 
 The application displays an icon in the notification area (system tray) that changes based on whether the Recycle Bin is empty or full. The status is checked automatically every 2 seconds.
 
 ## How It Works
+
+<img width="271" height="185" alt="Structure" src="https://github.com/user-attachments/assets/721ec9a6-a99c-4d19-b596-7fea73ff2939" />
 
 The project uses a single script extending `StatusIndicator`. The Recycle Bin state is determined by executing a PowerShell command that interfaces with the `Shell.Application` COM object to count items in the `RecycleBin` folder (ID 10).
 
