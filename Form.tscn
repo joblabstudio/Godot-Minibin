@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5u43c7ycego6"]
+
+[ext_resource type="Script" uid="uid://brlm2sp5jp7pt" path="res://system_tray.gd" id="2_08o1k"]
+[ext_resource type="Texture2D" uid="uid://ca5fo64dvrpej" path="res://Icons/0.png" id="3_3q2pf"]
+
+[node name="Form" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SystemTray" type="StatusIndicator" parent="."]
+tooltip = "Godot Minibin"
+icon = ExtResource("3_3q2pf")
+menu = NodePath("../SystemTrayMenu")
+script = ExtResource("2_08o1k")
+
+[node name="SystemTrayMenu" type="PopupMenu" parent="."]
+oversampling_override = 1.0
+title = "Godot Minibin"
+size = Vector2i(238, 134)
+visible = true
+system_menu_id = 3
+item_count = 4
+item_0/text = "Open"
+item_0/id = 0
+item_1/text = "Clear"
+item_1/id = 2
+item_2/id = 1
+item_2/separator = true
+item_3/text = "Exit"
+item_3/id = 3
+
+[connection signal="id_pressed" from="SystemTrayMenu" to="SystemTray" method="_on_system_tray_menu_id_pressed"]

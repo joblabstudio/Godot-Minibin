@@ -1,0 +1,41 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[accessibility]
+
+general/updates_per_second=15
+
+[application]
+
+config/name="Godot Minibin"
+run/main_scene="uid://c5u43c7ycego6"
+config/features=PackedStringArray("4.5", "Mobile")
+run/low_processor_mode=true
+boot_splash/bg_color=Color(0.13211995, 0.23810199, 0.49001324, 1)
+boot_splash/image="uid://di5oq3tehlnfo"
+config/icon="uid://bnpc46n2d82b1"
+
+[display]
+
+window/size/viewport_width=120
+window/size/viewport_height=120
+window/size/mode=1
+window/size/resizable=false
+window/size/borderless=true
+window/size/transparent=true
+window/size/no_focus=true
+window/size/maximize_disabled=true
+window/energy_saving/keep_screen_on=false
+window/stretch/aspect="ignore"
+window/vsync/vsync_mode=0
+
+[rendering]
+
+renderer/rendering_method="mobile"
